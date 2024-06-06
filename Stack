@@ -1,0 +1,26 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+int main() {
+    int n;
+    cout << "Masukkan nilai n: ";
+    cin >> n;
+
+    stack<int> stack;
+
+    for (int i = 1; i <= n; ++i) {
+        if (i % 2 != 0) {
+            stack.push(i);
+        }
+    }
+
+    cout << "Angka ganjil hingga " << n << " adalah: ";
+    while (!stack.empty()) {
+        int top = stack.top();
+        cout << top << " ";
+        stack.pop();
+    }
+    cout << endl;
+
+    return 0;
+}
